@@ -31,38 +31,38 @@ Models Used
 
 The following machine learning models were used for training and prediction:
 
-1. Logistic Regression
+### **1. Logistic Regression**
 A simple linear model used for binary classification.
 Performance: Good baseline model for comparison with more complex models.
-2. Decision Tree
+### **2. Decision Tree**
 A tree-based model that uses a set of decision rules to classify the data.
 Performance: Handles both categorical and numerical data, but prone to overfitting.
-3. Random Forest
+### **3. Random Forest**
 An ensemble of decision trees that improves prediction accuracy by averaging multiple decision trees.
 Performance: This model performed the best overall, balancing accuracy and recall of the minority class.
-4. Gradient Boosting
+### **4. Gradient Boosting**
 An ensemble technique that builds trees sequentially to minimize errors made by previous models.
 Performance: Improved performance over random forests but computationally expensive.
-5. AdaBoost
+### **5. AdaBoost**
 Another ensemble method that focuses on correcting the errors made by weak learners, emphasizing hard-to-classify examples.
 Performance: Good for improving weak models like decision trees.
-6. XGBoost
+### **6. XGBoost**
 An optimized implementation of gradient boosting that is efficient and often produces state-of-the-art results in classification tasks.
 Performance: Performed well, but Random Forest outperformed it in terms of balancing recall for the minority class.
-Class Imbalance Handling
 
+### ** Class Imbalance Handling**
 The dataset suffers from class imbalance, with significantly fewer cases of cardiovascular risk compared to those without. To address this, we applied the following techniques:
 
-1. Under-Sampling
+### **1. Under-Sampling**
 Randomly reducing the majority class (no-risk) to balance the dataset.
-2. Over-Sampling
+### **2. Over-Sampling**
 Randomly duplicating the minority class (risk) to achieve balance.
-3. SMOTE (Synthetic Minority Over-sampling Technique)
+### **3. SMOTE (Synthetic Minority Over-sampling Technique)**
 Generates synthetic samples for the minority class to improve model learning.
-4. SMOTE Tomek
+### **4. SMOTE Tomek**
 Combines SMOTE with Tomek links, which removes noisy and borderline examples from the dataset.
-Hyperparameter Tuning
 
+### **Hyperparameter Tuning**
 To optimize the performance of the models, hyperparameter tuning was performed, particularly to improve the recall of the minority class. Random Forest benefited significantly from tuning the following hyperparameters:
 
 n_estimators: The number of trees in the forest.
@@ -71,7 +71,7 @@ min_samples_split: The minimum number of samples required to split an internal n
 min_samples_leaf: The minimum number of samples required to be at a leaf node.
 These adjustments helped enhance the recall of the minority class (CVD positive) without sacrificing too much precision, leading to a better model for predicting individuals at risk of cardiovascular disease.
 
-##**Model Performance**
+## **Model Performance**
 
 The following key metrics were used to evaluate model performance:
 
@@ -82,6 +82,6 @@ F1-Score: A balance between precision and recall.
 ROC-AUC: A measure of how well the model distinguishes between classes.
 Random Forest emerged as the best-performing model after hyperparameter tuning, with an improved recall score for the minority class, making it the most effective for identifying high-risk individuals.
 
-##**Conclusion**
+## **Conclusion**
 
 This project demonstrates how to use various machine learning algorithms to predict cardiovascular risk based on health-related features. Several techniques were employed to address class imbalance, and Random Forest emerged as the best-performing model after hyperparameter tuning, particularly for optimizing recall for the minority class. Future work could explore further hyperparameter optimization, feature selection, and deep learning models.
