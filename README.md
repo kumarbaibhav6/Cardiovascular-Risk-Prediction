@@ -50,7 +50,7 @@ Performance: Good for improving weak models like decision trees.
 An optimized implementation of gradient boosting that is efficient and often produces state-of-the-art results in classification tasks.
 Performance: Performed well, but Random Forest outperformed it in terms of balancing recall for the minority class.
 
-### ** Class Imbalance Handling**
+### **Class Imbalance Handling**
 The dataset suffers from class imbalance, with significantly fewer cases of cardiovascular risk compared to those without. To address this, we applied the following techniques:
 
 ### **1. Under-Sampling**
