@@ -1,28 +1,30 @@
-Cardiovascular Risk Prediction
+##**Cardiovascular Risk Prediction**
 
 This project focuses on predicting the likelihood of an individual developing cardiovascular diseases (CVD). Using a variety of machine learning algorithms, the goal is to classify individuals into risk categories based on several health-related features.
 
-Project Overview
+##**Project Overview**##
 
 Cardiovascular disease is one of the leading causes of death worldwide. Early prediction and intervention can significantly reduce mortality rates. In this project, we used various machine learning models to predict cardiovascular risk based on a set of health and lifestyle features.
 
-Data Overview
+##**Data Overview**##
 
 The dataset used in this project consists of health-related data for individuals, such as age, gender, blood pressure, cholesterol levels, and lifestyle factors. These features are used to predict the likelihood of having cardiovascular disease (CVD). The data is split into two classes: risk (CVD positive) and no risk (CVD negative).
 
-Tasks Performed
+#**Tasks Performed**##
 
-1. Exploratory Data Analysis (EDA)
+#**1. Exploratory Data Analysis (EDA)**##
 Data Cleaning: Handled missing values, outliers, and inconsistent data.
 Visualization: Used bar plots, histograms, and heatmaps to analyze feature distributions, correlations, and trends in the data.
 Feature Distribution: Examined the distribution of key features like age, cholesterol, and blood pressure.
 Class Distribution: Analyzed the class imbalance and performed visualizations of the target variable (CVD risk).
-2. Feature Engineering
+
+##**2. Feature Engineering**##
 Feature Creation: Generated new features based on existing ones to enhance model performance (e.g., BMI from height and weight).
 Handling Missing Data: Used techniques like mean/median imputation and removal of rows with excessive missing values.
 Normalization/Scaling: Applied standard scaling to numerical features to ensure uniformity and faster model convergence.
 Categorical Encoding: Applied One-Hot Encoding to convert categorical variables into numerical format.
-3. Model Training and Validation
+
+##**3. Model Training, Validation and Hyperparameter Tuning**##
 Split the data: Divided the dataset into training and testing sets (80/20 split).
 Model Evaluation: Used a variety of performance metrics like accuracy, precision, recall, F1-score, and ROC-AUC to evaluate the models.
 Models Used
@@ -69,7 +71,7 @@ min_samples_split: The minimum number of samples required to split an internal n
 min_samples_leaf: The minimum number of samples required to be at a leaf node.
 These adjustments helped enhance the recall of the minority class (CVD positive) without sacrificing too much precision, leading to a better model for predicting individuals at risk of cardiovascular disease.
 
-Model Performance
+##**Model Performance**##
 
 The following key metrics were used to evaluate model performance:
 
@@ -80,6 +82,6 @@ F1-Score: A balance between precision and recall.
 ROC-AUC: A measure of how well the model distinguishes between classes.
 Random Forest emerged as the best-performing model after hyperparameter tuning, with an improved recall score for the minority class, making it the most effective for identifying high-risk individuals.
 
-Conclusion
+##**Conclusion**##
 
 This project demonstrates how to use various machine learning algorithms to predict cardiovascular risk based on health-related features. Several techniques were employed to address class imbalance, and Random Forest emerged as the best-performing model after hyperparameter tuning, particularly for optimizing recall for the minority class. Future work could explore further hyperparameter optimization, feature selection, and deep learning models.
