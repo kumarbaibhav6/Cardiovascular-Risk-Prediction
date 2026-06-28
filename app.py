@@ -43,7 +43,7 @@ class InputData(BaseModel):
     
 @app.post("/predict")
 def predict(data: InputData):
-    input_df = pd.DataFrame([data.dict()])
+    input_df = pd.DataFrame([data.model_dump()])
     input_df = input_df[feature_order]  # Ensure correct order
 
     prob = model.predict_proba(input_df)[0][1]
